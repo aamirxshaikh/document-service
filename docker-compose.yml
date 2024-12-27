@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  document-service:
+    image: mongo
+    container_name: document-service
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./document-service:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+    restart: always
