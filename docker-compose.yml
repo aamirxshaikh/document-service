@@ -1,13 +1,13 @@
 version: '3.8'
 
 services:
-  document-service:
+  document-service-mongo:
     image: mongo
-    container_name: document-service
+    container_name: document-service-mongo
     ports:
       - "27017:27017"
     volumes:
-      - ./document-service:/data/db
+      - ./document-service-mongo:/data/db
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=root
